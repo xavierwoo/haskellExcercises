@@ -44,4 +44,4 @@ sumDigits (x:xs)
 	| otherwise = x + sumDigits xs
 	
 isCreditCardValid :: Integer -> Bool
-isCreditCardValid cardNum = (mod (sumDigits $ doubleEveryOtherL 1 $ toDigitsRev cardNum) 10) == 0
+isCreditCardValid cardNum = mod (sumDigits $ doubleEveryOtherL 1 $ toDigitsRev cardNum) 10 == 0
